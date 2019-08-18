@@ -1,5 +1,5 @@
 # GitHub Users Integration
-A Web App integrating with the GitHub REST API
+A Web App integrating with the GitHub REST API. 
 When you search for a GitHub username the users top 5 repos (ordered by highest stargazer counts) will be displayed
 
 In this project I have aimed to keep my code SOLID and DRY. Some of the techniques and technologies used include:
