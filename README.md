@@ -7,9 +7,10 @@ In this project I have aimed to keep my code SOLID and DRY. Some of the techniqu
 - Latest stable version of Bootstrap (v4.3.1) for responsiveness and elements such as nav-bar and text input box.
 - Dependency Inversion via an IoC Container (Ninject).
 - Generics (when making Web Requests) to limit code duplication / aid re-use.
+- Asynchronous programming using the Task library.
 - Seperate classes for seperate areas (e.g. ErrorLogger, WebRequestHelper etc).
 - Configuration values used from Web.Config where applicable.
 - Error logging to file in project root. The repo could be swapped out to log to a DB e.g. CosmosDB.
 - Unit Testing (MSTest and nUnit).
 
-![AppImage](https://raw.githubusercontent.com/Sohail92/GitHubUsersIntegration/master/screenshot.jpg)
+![AppImage](https://raw.githubusercontent.com/Sohail92/GitHubUsersIntegration/master/app.png)
