@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+
+<h1>About</h1>
+<hr />
+<h4>A Web App integrating with the GitHub REST API</h4>
+<h5>When you search for a GitHub username the users top 5 repos (ordered by highest stargazer counts) will be displayed</h5>
+<hr />
+<p>In this project I have aimed to keep my code SOLID and DRY. Some of the techniques and technologies used include:</p>
+<ul class="square">
+    <li>.NET Framework Web Application with an MVC structure.</li>
+    <li>Latest stable version of Bootstrap (v4.3.1) for responsiveness and elements such as nav-bar and text input box.</li>
+    <li>Dependency Inversion via an IoC Container (Ninject).</li>
+    <li>Generics (when making Web Requests) to limit code duplication / aid re-use.</li>
+    <li>Asynchronous programming using the Task library.</li>
+    <li>Seperate classes for seperate areas (e.g. ErrorLogger, WebRequestHelper etc).</li>
+    <li>Configuration values used from Web.Config where applicable.</li>
+    <li>Error logging to file in project root. The repo could be swapped out to log to a DB e.g. CosmosDB.</li>
+    <li>Unit Testing (MSTest and nUnit).</li>
+</ul>

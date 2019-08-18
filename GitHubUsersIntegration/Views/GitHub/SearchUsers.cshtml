@@ -1,0 +1,52 @@
+﻿@using GitHubUsersIntegration.Models.ViewModels;
+@model UserRepoVM
+
+@{
+    ViewBag.Title = "Search result";
+}
+
+@if (!string.IsNullOrEmpty(@Model.UserResponse.Name))
+{
+    <p class="text-info">Result found for GitHub user: @Model.UserResponse.Username</p>
+    <hr />
+    <div class="container">
+        <div class="row">
+            <div class="col, col-12, col-md-3">
+                <img src="@Model.UserResponse.AvatarUrl" alt="Avatar" class="centeredAvatar">
+            </div>
+            <div class="col, col-md-9">
+                <p class="font-weight-bolder">@Model.UserResponse.Name</p>
+                <p>@Model.UserResponse.Location</p>
+                <p>@Model.UserResponse.Description</p>
+                <p><a href="@Model.UserResponse.PageUrl">GitHub page</a></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Repo Name</th>
+                    <th>Description</th>
+                    <th>Stargazers</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var repo in @Model.RepoResponse)
+                {
+                    <tr>
+                        <td class="font-weight-bolder">
+                            <!-- Take the name of the repo after the 'username/' to show only the repo name -->
+                            <a href="@repo.RepoUrl">@repo.FullName.Substring(@repo.FullName.IndexOf('/') + 1)</a>
+                        </td>
+                        <td>@repo.Description</td>
+                        <td>@repo.StargazersCount</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
+else
+{ <p>Unfortunately we were not able to find a result for the requested user.</p>}

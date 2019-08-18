@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<h1>Welcome</h1>
+<hr />
+<p>You can enter a GitHub account username in the text box below to get information about the account.</p>
+<p>Their name, location and top 5 repositories will be displayed (ordered by Stargazers).</p>
+<hr />
+@using (Html.BeginForm("SearchUsers", "GitHub", FormMethod.Post))
+{
+    <div class="form-group">
+        <div class="form-row">
+            <div class="col-auto">
+                <input type="text" class="form-control" name="username" placeholder="Enter GitHub Username" required>
+            </div>
+            <div class="col-auto">
+                <button type="submit" class="btn btn-primary">Search</button>
+            </div>
+        </div>
+    </div>
+}
